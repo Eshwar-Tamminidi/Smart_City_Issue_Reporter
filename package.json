@@ -1,0 +1,31 @@
+{
+  "name": "smart-city-issue-reporter",
+  "version": "1.0.0",
+  "description": "Civic issue prioritization ML project with a trainable scikit-learn pipeline and optional web demo.",
+  "private": true,
+  "scripts": {
+    "install:all": "npm install --prefix frontend && npm install --prefix backend",
+    "build": "npm --prefix frontend run build",
+    "start": "npm --prefix backend start",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "dev:backend": "npm --prefix backend run dev",
+    "ml:generate": "PYTHONPATH=ml python3 -m civicpulse_ml.data",
+    "ml:train": "PYTHONPATH=ml python3 -m civicpulse_ml.train",
+    "ml:predict": "PYTHONPATH=ml python3 -m civicpulse_ml.predict",
+    "ml:test": "PYTHONPATH=ml python3 -m unittest ml/test_ml_pipeline.py",
+    "test": "npm --prefix backend test"
+  },
+  "keywords": [
+    "smart-city",
+    "machine-learning",
+    "dashboard",
+    "civic-tech"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
