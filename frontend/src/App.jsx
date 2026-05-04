@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import L from "leaflet";
 import { MapContainer, Marker, Popup, TileLayer, useMap } from "react-leaflet";
-
+const API_BASE = "https://smart-city-issue-reporter-2.onrender.com";
 const initialToken = localStorage.getItem("civicpulse_token") || "";
 const initialUser = JSON.parse(localStorage.getItem("civicpulse_user") || "null");
 const statusOptions = ["submitted", "verified", "assigned", "in_progress", "resolved", "rejected"];
@@ -17,7 +17,7 @@ function App() {
   const [route, setRoute] = useState(window.location.hash || "#home");
 
   const api = async (path, options = {}) => {
-    const response = await fetch(path, {
+    const response = await fetch(`${API_BASE}${path}`, {
       ...options,
       headers: {
         "Content-Type": "application/json",
