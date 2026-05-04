@@ -5,7 +5,7 @@ const http = require("http");
 const path = require("path");
 const { URL } = require("url");
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 const HOST = process.env.HOST || "127.0.0.1";
 const ROOT = __dirname;
 const FRONTEND_DIR = path.join(ROOT, "..", "frontend");
