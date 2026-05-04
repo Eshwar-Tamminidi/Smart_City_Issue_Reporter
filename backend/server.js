@@ -498,13 +498,27 @@ async function handleApi(req, res) {
 
 ensureDatabase();
 
-http
-  .createServer((req, res) => {
+http.createServer((req, res) => {
+
+  // ✅ ADD THIS BLOCK AT TOP
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "GET, POST, PATCH, DELETE, OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+
+  if (req.method === "OPTIONS") {
+    res.writeHead(200);
+    return res.end();
+  }
+
+  // existing code...
     if (req.url.startsWith("/api/")) {
-      handleApi(req, res);
-      return;
-    }
-    serveStatic(req, res);
+  handleApi(req, res);
+  return;
+}
+
+// Optional fallback
+res.writeHead(200, { "Content-Type": "text/plain" });
+res.end("Backend is running");
   })
   .listen(PORT, HOST, () => {
     console.log(`Smart City Issue Reporter running at http://${HOST}:${PORT}`);
