@@ -6,7 +6,7 @@ const path = require("path");
 const { URL } = require("url");
 
 const PORT = process.env.PORT || 5000;
-const HOST = process.env.HOST || "127.0.0.1";
+const HOST = "0.0.0.0";
 const ROOT = __dirname;
 const FRONTEND_DIR = path.join(ROOT, "..", "frontend");
 const DIST_DIR = path.join(FRONTEND_DIR, "dist");
