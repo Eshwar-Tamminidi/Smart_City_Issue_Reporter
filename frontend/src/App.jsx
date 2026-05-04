@@ -441,7 +441,6 @@ function LoginForm({ onSubmit }) {
       <label>Email<input value={email} onChange={(event) => setEmail(event.target.value)} type="email" required /></label>
       <label>Password<input value={password} onChange={(event) => setPassword(event.target.value)} type="password" required /></label>
       <button className="button primary" type="submit">Login Securely</button>
-      <p className="hint">Admin demo: admin@city.gov / admin123</p>
     </form>
   );
 }
