@@ -2,7 +2,7 @@
 # Smart_City_Issue_Reporter
 A full-stack ML based web application that enables citizens to report, track, and manage civic issues such as potholes, garbage, water leaks, and streetlight failures. The platform provides a seamless interface for users to submit complaints with location details, while authorities can monitor, prioritize, and resolve issues efficiently.
 =======
-# CivicPulse ML: Civic Issue Type and Priority Prediction
+# CivicPulse ML: Civic Issue Type and Priority Prediction:https://smart-city-issue-reporter-qon9ql8eg-eshwar2529s-projects.vercel.app
 
 CivicPulse ML is a machine-learning project for predicting civic complaint type and response priority from report text, image-derived statistics, location context, report age, and nearby unresolved complaints.
 
